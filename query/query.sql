@@ -116,5 +116,23 @@ CONCAT('Rp. ',FORMAT(ROUND(total_bayar - (harga * y.Qty)),0)) AS kembali
 FROM barang X 
 INNER JOIN transaksi Y ON y.id_barang = x.id_barang
 
+SELECT * FROM faktur_transaksi
 
+SELECT * FROM supplier
 
+SELECT nama_barang, harga, Qty, x.id_supplier, nama_supplier 
+FROM barang X
+INNER JOIN supplier Y ON y.id_supplier = x.id_supplier
+----------------------------------
+SELECT nama_barang, harga, Qty, harga * Qty AS jumlah, x.id_supplier, nama_supplier 
+FROM barang X
+INNER JOIN supplier Y ON y.id_supplier = x.id_supplier
+-------
+SELECT x.nama_barang, 
+@laba:= ROUND((10/100)*x.harga) AS laba, 
+ROUND(x.harga - @laba) AS harga_beli,
+x.harga AS harga_jual, y.Qty, jumlah 
+FROM barang X
+INNER JOIN faktur_transaksi Y ON y.id_barang = x.id_barang
+
+SELECT * FROM faktur_transaksi

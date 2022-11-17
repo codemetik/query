@@ -1,0 +1,35 @@
+perintah pertama kali untuk configurasi git dengan akun github.com
+
+Ketikan perintah berikut : lalu enter
+$ git config --global user.name "codemetik"
+
+lalu ketikan perintan lagi seperti dibawah :
+$ git config --global user.email "namaemail@gmail.com" 
+
+ketik perintah lagi, lalu enter
+$ git config --list
+
+perintah 4 
+$ git init
+
+perintah 5 
+$ git add .
+
+perintah 6 
+$ git remote add origin https://github.com/nama_akun/name_repository.git
+
+perintah cek remote
+$ git remote
+
+perintah 8, lalu enter
+$ git commit -m "tulis_catatan_perubahan"
+
+perintah selanjutnya 
+$ git log --oneline
+ 
+Perinta push dengan nama_remote dan nama_branch
+utk nama branch bisa master atau main lalu enter
+$ git push -u nama_remote master
+
+
+
